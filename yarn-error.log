@@ -1,0 +1,31 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe C:\Users\Lucas\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init -Y
+
+PATH: 
+  C:\Users\Lucas\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Lucas\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\Lucas\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;D:\Programacao\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\dotnet;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\Program Files\nodejs;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_211\bin;D:\Android\Sdk\platform-tools;C:\Users\Lucas\AppData\Local\Microsoft\WindowsApps;C:\Users\Lucas\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lucas\AppData\Local\Programs\Azure Data Studio\bin;D:\Program Files\heroku\bin;D:\Programacao\php;C:\Users\Lucas\AppData\Roaming\Composer\vendor\bin;C:\Users\Lucas\.dotnet\tools;C:\Users\Lucas\AppData\Roaming\npm;D:\Users\Lucas\AppData\Local\JpegminiPro3;C:\Users\Lucas\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\Lucas\AppData\Local\Yarn\bin;D:\Android\Sdk\platform-tools;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (C:\Users\Lucas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:96815:59)
+      at Object.<anonymous> (C:\Users\Lucas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:89088:38)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Lucas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Lucas\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
