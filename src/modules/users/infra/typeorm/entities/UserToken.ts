@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import {
   Entity,
   Column,
@@ -8,11 +7,12 @@ import {
   Generated,
 } from 'typeorm';
 
-@Entity('users_tokens')
+@Entity('user_tokens')
 class UserToken {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column()
   @Generated('uuid')
   token: string;
 

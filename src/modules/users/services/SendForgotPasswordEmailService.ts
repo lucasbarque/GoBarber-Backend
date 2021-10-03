@@ -30,12 +30,11 @@ class SendForgotPasswordEmailService {
     if (!user) {
       throw new AppError('User does not exists.');
     }
+    const { token } = await this.userTokenRepository.generate(user.id);
 
-    await this.userTokenRepository.generate(user.id);
-
-    this.mailProvider.sendMail(
+    await this.mailProvider.sendMail(
       email,
-      'Pedido de recuperação de senha recebido',
+      `Pedido de recuperação de senha recebido: ${token}`,
     );
   }
 }
