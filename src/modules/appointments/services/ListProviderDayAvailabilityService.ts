@@ -1,16 +1,16 @@
 import { injectable, inject } from 'tsyringe';
-import { getHours } from 'date-fns';
+import { getHours, isAfter } from 'date-fns';
 
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
-interface IRequest {
+interface IRequestDTO {
   provider_id: string;
-  day: number;
   month: number;
   year: number;
+  day: number;
 }
 
-type IResponse = Array<{
+type IResponseDTO = Array<{
   hour: number;
   available: boolean;
 }>;
@@ -27,7 +27,7 @@ class ListProviderDayAvailabilityService {
     year,
     month,
     day,
-  }: IRequest): Promise<IResponse> {
+  }: IRequestDTO): Promise<IResponseDTO> {
     const appointments =
       await this.appointmentsRepository.findAllInDayFromProvider({
         provider_id,
@@ -45,13 +45,17 @@ class ListProviderDayAvailabilityService {
       (_, index) => index + hourStart,
     );
 
+    const currentDate = new Date(Date.now());
+
     const availability = eachHourArray.map(hour => {
       const hasAppointmentInHour = appointments.find(
         appointment => getHours(appointment.date) === hour,
       );
+      const compareDate = new Date(year, month - 1, day, hour);
+
       return {
         hour,
-        availability: !hasAppointmentInHour,
+        available: !hasAppointmentInHour && isAfter(compareDate, currentDate),
       };
     });
 
