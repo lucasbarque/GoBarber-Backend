@@ -14,6 +14,7 @@
     "@types/cors": "^2.8.12",
     "@types/hapi__joi": "^17.1.7",
     "@types/mongodb": "^4.0.7",
+    "aws-sdk": "^2.1036.0",
     "bcryptjs": "^2.4.3",
     "celebrate": "^15.0.0",
     "class-transformer": "^0.2.3",
